@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+
+{% block title %} User food home {% endblock %}
+
+{% block body %}
+
+{% if current_user.is_authenticated %}
+<img class="profile" src="{{ user_img }}" alt="user_img">
+<p>Hello, {{ current_user.user_name }}</p>
+{% endif %}
+<p>If you would like to change your password, click <a href="/change-password">here.</a></p>
+<p>Change your image</p>
+<form action="/profile" method="POST">
+    <p>
+        Select an image:
+        <label>
+            <input type="radio" name="user_img" value="/static/img/delivery.jpg">
+            <img class="profile" src="/static/img/delivery.jpg" alt="Delivery Driver">
+        </label>
+        <label>
+            <input type="radio" name="user_img" value="/static/img/pizza.jpg">
+            <img class="profile" src="/static/img/pizza.jpg" alt="Pizza">
+        </label>
+        <label>
+            <input type="radio" name="user_img" value="/static/img/astronaut.jpg">
+            <img class="profile" src="/static/img/astronaut.jpg" alt="Astronaut Eating a Hambuger">
+        </label>
+        <label>
+            <input type="radio" name="user_img" value="/static/img/octopus.jpg">
+            <img class="profile" src="/static/img/octopus.jpg" alt="Octopus Chef">
+        </label>
+        
+    </p>
+    <p>
+        <button class="btn btn-outline-primary" type="submit">Submit</button>
+    </p>
+</form>
+
+
+{% endblock %}

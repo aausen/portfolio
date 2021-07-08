@@ -1,0 +1,45 @@
+{% extends 'base.html' %} 
+
+{% block title %} User food home {% endblock %}
+
+{% block body %}
+
+<img class="toast-mix rounded mx-auto d-block img-fluid" src="/static/img/toast.jpg" alt="toast">
+
+<h2>{{ name }}</h2>
+<a href="/">Search</a>
+<form action="/add-item" method="POST">
+  
+    <p>
+        Select a place to store your food
+    </p>
+    <fieldset>
+        {% for item in info %}
+        <input type="radio" name="add-food" value="{{ name }}, {{ item[0] }}, {{ item[2] }}">
+        <label>{{ item[0] }}</label>
+        {% endfor %}
+    
+        <button class="btn btn-outline-primary" type="submit">Add food</button>
+    </fieldset>
+</form>
+
+<p>
+    {% for item in info %}
+    Location: {{ item[0] }}
+    <br>
+    Expiration: {{ item[1] }}
+    <br>
+    {% endfor %}
+    
+
+    <img class="tips" src="static/img/tips.jpg" alt="Tips:">
+    <div class="col-8">
+        <ul>
+        {% for tip in tips %}
+        <li>{{ tip }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</p>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
+.content-body {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.right {
+    right: 0;
+}
+
+.profile {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.profile:hover{
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.login {
+    width: 100%;
+}
+
+
+.search {
+    padding : 20px;
+}
+
+.navbar {
+    background-color: #e3f2fd;
+    font-size: 25px;
+  
+    
+}
+
+.select-img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.select-img:checked + label {
+    border:1px solid;
+}
+
+.tips {
+    width: 150px;
+}
+
+.btn-group {
+    padding: 20px;
+    padding-left: 0px;
+}
+
+.nav-img {
+    height: 75px;
+    width: 75px;
+    padding: 5px;
+}
+
+.login-name {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.footer {
+    background-color: #e3f2fd;
+}
+
+.kitchen {
+    height: 300px;
+    width: 600px;
+}
+
+.var-food {
+    width: 704px;
+   
+
+}
+
+.toast-mix {
+    
+    height: 394px;
+}
+
+input[type=text] {
+    padding-bottom: 2px;
+}
+
+ul {
+    list-style-image: url(/static/img/pine.png);
+}
+

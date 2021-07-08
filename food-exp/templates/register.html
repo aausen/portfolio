@@ -1,0 +1,68 @@
+{% extends 'base.html' %} 
+
+{% block title %} User food home {% endblock %}
+
+{% block body %}
+
+
+<h1>Create an account</h1>
+
+<a href = "/login">Login</a>
+
+<div></div>    
+
+
+<form action="/register" method="POST">
+    <p>
+        <input class="border border-primary rounded" type="text" name="user_name" placeholder="Username" required>*
+    </p>
+    <p>
+        <input class="border border-primary rounded" type="text" name="email" placeholder="Email" required>*
+    </p>
+    <p>
+        <input class="border border-primary rounded" type="password" name="password" placeholder="Password" required>*
+    </p>
+    <p>
+        Select an image:*
+        <div class="btn-group" role="group">
+            <label>
+                <input  type="radio" name="user_img" id="delivery" value="/static/img/delivery.jpg">
+                <label for="delivery">
+                    <img class="select-img" src="/static/img/delivery.jpg" alt="Delivery Driver">
+                </label>
+            </label>
+            <label>
+                <input type="radio" name="user_img" id="pizza" value="/static/img/pizza.jpg">
+                <label for="pizza">
+                    <img class="select-img" src="/static/img/pizza.jpg" alt="Pizza">
+                </label>
+            </label>
+            <label>
+                <input type="radio" name="user_img" id="astronaut" value="/static/img/astronaut.jpg">
+                <label for="astronaut">
+                    <img class="select-img" src="/static/img/astronaut.jpg" alt="Astronaut Eating a Hambuger">
+                </label>
+            </label>
+            <label>
+                <input type="radio" name="user_img" id="octopus" value="/static/img/octopus.jpg">
+                <label for ="octopus">
+                    <img class="select-img" src="/static/img/octopus.jpg" alt="Octopus Chef">
+                </label>
+            </label>
+        </div>
+    <div>
+    * Indicates a required field.
+    </div>
+    </p>
+    <p>
+        <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+    </p>
+</form>
+
+<p>
+    images from :<a href="https://www.freepik.com/free-photos-vectors/food">Food vector created by mamewmy - www.freepik.com</a> 
+    <a href='https://www.freepik.com/free-photos-vectors/logo'>Logo vector created by catalyststuff - www.freepik.com</a>
+    <a href='https://www.freepik.com/free-photos-vectors/food'>Food vector created by catalyststuff - www.freepik.com</a>
+</p>
+
+{% endblock %}
