@@ -30,7 +30,7 @@ def load_user(user_id):
 def add_tests():
     g.jasmine_tests = JS_TESTING_MODE
 
-@app.route('/')
+@app.route('/homepage')
 def show_homepage():
     """View homepage"""
     if current_user.is_authenticated:
@@ -81,7 +81,7 @@ def delete():
 
     crud.delete_food_from_db(user_food_id)
 
-    return redirect('/')
+    return redirect("/hompage")
   
 
 
@@ -137,7 +137,7 @@ def login_process():
 
         flash("Logged in successfully!")
 
-        return redirect("/")
+        return redirect("/homepage")
     
     else:
         flash("Sorry, try again.")
