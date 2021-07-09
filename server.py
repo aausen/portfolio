@@ -18,6 +18,15 @@ app.secret_key = os.environ['secret_key']
 app.jinja_env.undefined = StrictUndefined
 JS_TESTING_MODE = False
 
+@app.route("/")
+def show_home():
+    """View homepage of portfolio."""
+
+    render_template('home.html')
+
+
+#____________________________Toss It_______________________________
+
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -32,7 +41,7 @@ def add_tests():
 
 @app.route('/homepage')
 def show_homepage():
-    """View homepage"""
+    """View homepage of Toss It!"""
     if current_user.is_authenticated:
         user_id = current_user.get_id()
 
