@@ -22,25 +22,25 @@ JS_TESTING_MODE = False
 def show_home():
     """View homepage of portfolio."""
 
-    render_template("home.html")
+    return render_template("home.html")
 
 @app.route("/about")
 def show_about():
     """Show about me page."""
 
-    render_template("about.html")
+    return render_template("about.html")
 
 @app.route("/projects")
 def show_projects():
     """Show projects page."""
 
-    render_template("projects.html")
+    return render_template("projects.html")
 
-@app.route("/conact")
+@app.route("/contact")
 def show_contact():
     """Show contact page."""
 
-    render_template("contact.html")
+    return render_template("contact.html")
 
 #____________________________Toss It_______________________________
 
