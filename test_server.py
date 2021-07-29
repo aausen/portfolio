@@ -59,23 +59,25 @@ class MyAppIntegrationTestCase(unittest.TestCase):
     # def test_register_form(self):
     #     result = self.client.get('register', data={'email' : 'test@test.test', 'password' : 'test', 'pref_contact' : 'email'})
 
-    # def test_search(self):
-    #     result = self.client.get('/search')
-    #     self.assertIn(b'<h1>Food search results</h1>', result.data)
+    def test_search(self):
+        result = self.client.get('/search')
+        self.assertIn(b'<h1>Food search results</h1>', result.data)
+        print("*"*20)
+        print("Ran test_search")
 
-    # def test_add_item(self):
-    #     result = self.client.get('/add-item')
-    #     self.assertIn(b'<p>Select a place to store your food</p>', result.data)
+    def test_add_item(self):
+        result = self.client.get('/add-item')
+        self.assertIn(b'<p>Select a place to store your food</p>', result.data)
 
     ## Test_search and test_add_item are throwing errors because of the new_url. It says 
     ## the list index is out of range since it's not actually doing a get request
 
-    # def test_profile(self):
-    #     result = self.client.get('/profile', data={email : "test@test.test"})
-    #     self.assertIn(b'<h2>This is your profile</h2>', result.data)
-    #     print("*"*30)
-    #     print("test_profile", result.data)
-    #     print("*"*30)
+    def test_profile(self):
+        result = self.client.get('/profile')
+        self.assertIn(b'<h2>This is your profile</h2>', result.data)
+        print("*"*30)
+        print("test_profile", result.data)
+        print("*"*30)
 
 if __name__ == '__main__':
     unittest.main()
