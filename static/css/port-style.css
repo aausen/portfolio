@@ -17,3 +17,9 @@
     width: 100px;
     
 }
+
+.contact-background {
+    background-image: url(/static/img/contact.jpg);
+    width: 100%;
+    height: auto;
+}
